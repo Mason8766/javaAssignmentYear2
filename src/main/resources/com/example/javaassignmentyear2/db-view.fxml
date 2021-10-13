@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.javaassignmentyear2.Controllers.DbViewController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignmentyear2.Controllers.DbViewController">
+   <children>
+      <TableView fx:id="tblGot" layoutX="35.0" layoutY="67.0" prefHeight="200.0" prefWidth="548.0">
+        <columns>
+          <TableColumn fx:id="clmName" prefWidth="181.0" text="Name" />
+          <TableColumn fx:id="clmScreenTime" prefWidth="79.0" text="Screen Time" />
+            <TableColumn fx:id="clmEpisodes" prefWidth="58.0" text="Episodes" />
+            <TableColumn fx:id="clmActor" minWidth="2.0" prefWidth="229.0" text="Actor" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

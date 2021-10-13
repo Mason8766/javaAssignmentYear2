@@ -1,6 +1,6 @@
 package com.example.javaassignmentyear2.Utilities;
 
-import com.example.javaassignmentyear2.Models.Character;
+import com.example.javaassignmentyear2.Models.GotChar;
 import javafx.scene.chart.XYChart;
 
 import java.sql.Connection;
@@ -43,9 +43,9 @@ public class DBUtility {
         return ScreenData;//return to contoller with data
     }
 
-    public static ArrayList<Character> getGotData()//creating the table method
+    public static ArrayList<GotChar> getGotData()//creating the table method
     {
-        ArrayList<Character> Characters = new ArrayList<>();//array to hold the character objects
+        ArrayList<GotChar> gotChars = new ArrayList<>();//array to hold the character objects
 
         String sql ="SELECT ID,name,screentime,episodes,portrayed_by_name AS actor " +
                     "FROM gotscreentimes;";//sql statement
@@ -66,15 +66,15 @@ public class DBUtility {
                 double screenTime = resultSet.getDouble("screentime");
                 String actor = resultSet.getString("actor");
 
-                Character newCharacter = new Character( id, episodes, name, actor, screenTime);
+                GotChar newGotChar = new GotChar( id, episodes, name, actor, screenTime);
                 //System.out.println(newCharacter.toString());
-                Characters.add(newCharacter);//array of all characters
+                gotChars.add(newGotChar);//array of all characters
 
             }
         }catch(Exception e)
         {
             e.printStackTrace();
         }
-        return Characters;//returns results
+        return gotChars;//returns results
     }
 }

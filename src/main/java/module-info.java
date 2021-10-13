@@ -8,4 +8,7 @@ module com.example.javaassignmentyear2 {
     exports com.example.javaassignmentyear2;
     exports com.example.javaassignmentyear2.Controllers;
     opens com.example.javaassignmentyear2.Controllers to javafx.fxml;
+
+    exports  com.example.javaassignmentyear2.Models;
+    opens  com.example.javaassignmentyear2.Models to javafx.fxml;
 }

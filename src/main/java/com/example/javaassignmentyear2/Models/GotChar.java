@@ -1,11 +1,11 @@
 package com.example.javaassignmentyear2.Models;
 
-public class Character {
+public class GotChar {
     int id,episodes;
     String name, actor;
     double screenTime;
 
-    public Character(int id, int episodes, String name, String actor, double screenTime) {
+    public GotChar(int id, int episodes, String name, String actor, double screenTime) {
         setId(id);
         setActor(actor);
         setName(name);
