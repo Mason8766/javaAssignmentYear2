@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("db-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("INSERT NEW TITLE HERE");
+        stage.setTitle("Game of Thrones: Table View");
         stage.setScene(scene);
         stage.show();
     }

@@ -11,4 +11,6 @@ module com.example.javaassignmentyear2 {
 
     exports  com.example.javaassignmentyear2.Models;
     opens  com.example.javaassignmentyear2.Models to javafx.fxml;
+    exports com.example.javaassignmentyear2.Utilities;
+    opens com.example.javaassignmentyear2.Utilities to javafx.fxml;
 }

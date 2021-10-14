@@ -21,7 +21,7 @@ public class DBUtility {
 
         String sql ="SELECT name, screentime " +
                 "FROM gotscreentimes " +
-                "ORDER BY 2 DESC;";//what is run of the db
+                "ORDER BY 2 DESC LIMIT 25;";//what is run of the db
         try(
                 //db querry step
                 Connection conn = DriverManager.getConnection(connectURL, user, pw);
@@ -34,6 +34,8 @@ public class DBUtility {
             {
                 ScreenData.getData().add(new XYChart.Data<>(resultSet.getString("name"),
                         resultSet.getInt(2)));
+
+
             }
         }catch(Exception e)//if error with query
         {

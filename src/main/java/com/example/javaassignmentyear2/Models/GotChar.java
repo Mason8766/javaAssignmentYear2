@@ -5,6 +5,7 @@ public class GotChar {
     String name, actor;
     double screenTime;
 
+    //constructor
     public GotChar(int id, int episodes, String name, String actor, double screenTime) {
         setId(id);
         setActor(actor);
@@ -13,12 +14,13 @@ public class GotChar {
         setScreenTime(screenTime);
     }
 
+    //returns id
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
-        if (id>0)
+        if (id>0)//id must be greater than zero, or error occurs
             this.id = id;
         else
             throw new IllegalArgumentException("The ID must be greater than 0");
@@ -28,8 +30,8 @@ public class GotChar {
         return episodes;
     }
 
-    public void setEpisodes(int episodes) {
-        if (id>0 && id <74)
+    public void setEpisodes(int episodes) {//checks to see if episode # is valid
+        if (episodes>0 && episodes <74)
             this.episodes = episodes;
         else
             throw new IllegalArgumentException("A character must appear in at least 1 episode, and cannot appear in more than 73 episodes");
@@ -40,7 +42,7 @@ public class GotChar {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) {//Trims name, and make sure its valid
         if ((name.trim()).length()>0)
             this.name = name;
         else
@@ -51,7 +53,7 @@ public class GotChar {
         return actor;
     }
 
-    public void setActor(String actor) {
+    public void setActor(String actor) {//Trims actor, and make sure its valid
         if ((actor.trim()).length()>0)
             this.actor = actor;
         else
@@ -62,7 +64,7 @@ public class GotChar {
         return screenTime;
     }
 
-    public void setScreenTime(double screenTime) {
+    public void setScreenTime(double screenTime) {//checks valid screentime
         if (screenTime> 0 && screenTime < 3811)
             this.screenTime = screenTime;
         else
