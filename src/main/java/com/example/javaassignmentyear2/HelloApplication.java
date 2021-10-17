@@ -1,9 +1,9 @@
 package com.example.javaassignmentyear2;
 
-import com.example.javaassignmentyear2.Utilities.DBUtility;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,6 +14,8 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("db-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Image icon = new Image(getClass().getResourceAsStream("icon.png"));
+        stage.getIcons().add(icon);
         stage.setTitle("Game of Thrones: Table View");
         stage.setScene(scene);
         stage.show();
