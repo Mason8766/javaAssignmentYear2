@@ -9,10 +9,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class HelloApplication extends Application {
+public class GameOfThronesData extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("db-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(GameOfThronesData.class.getResource("db-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         Image icon = new Image(getClass().getResourceAsStream("icon.png"));
         stage.getIcons().add(icon);

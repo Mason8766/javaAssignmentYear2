@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.javaassignmentyear2/com.example.javaassignmentyear2.HelloApplication
+                                com.example.javaassignmentyear2/com.example.javaassignmentyear2.GameOfThronesData
                             </mainClass>
                         </configuration>
                     </execution>

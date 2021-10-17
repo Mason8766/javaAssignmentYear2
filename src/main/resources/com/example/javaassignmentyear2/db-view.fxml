@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignmentyear2.Controllers.DbViewController">
    <children>
-      <TableView fx:id="tblGot" layoutX="35.0" layoutY="67.0" prefHeight="200.0" prefWidth="548.0">
+      <TableView fx:id="tblGot" layoutX="35.0" layoutY="67.0" prefHeight="200.0" prefWidth="548.0" stylesheets="@styles.css">
         <columns>
           <TableColumn fx:id="clmName" prefWidth="181.0" text="Name" />
           <TableColumn fx:id="clmScreenTime" prefWidth="79.0" text="Screen Time" />
@@ -17,6 +17,11 @@
             <TableColumn fx:id="clmActor" minWidth="2.0" prefWidth="229.0" text="Actor" />
         </columns>
       </TableView>
-      <Button fx:id="btnScreen" layoutX="247.0" layoutY="298.0" mnemonicParsing="false" onAction="#btnScreenClicked" prefHeight="25.0" prefWidth="124.0" text="Screen Time" />
+      <Button fx:id="btnScreen" layoutX="234.0" layoutY="298.0" mnemonicParsing="false" onAction="#btnScreenClicked" prefHeight="56.0" prefWidth="132.0" stylesheets="@styles.css" text="Screen Time">
+         <font>
+            <Font name="Chiller" size="12.0" />
+         </font></Button>
+      <Label fx:id="lblCredit" layoutY="382.0" prefHeight="19.0" prefWidth="163.0" text="Created by: Mason Douglas" />
+      <Label fx:id="lblTitle" layoutX="46.0" layoutY="14.0" prefHeight="56.0" prefWidth="536.0" text="Game of Thrones Charachters: List View" />
    </children>
 </AnchorPane>

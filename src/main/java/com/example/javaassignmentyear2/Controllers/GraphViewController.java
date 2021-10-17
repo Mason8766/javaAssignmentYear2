@@ -2,7 +2,7 @@ package com.example.javaassignmentyear2.Controllers;
 
 
 
-import com.example.javaassignmentyear2.HelloApplication;
+import com.example.javaassignmentyear2.GameOfThronesData;
 import com.example.javaassignmentyear2.Utilities.DBUtility;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,7 +28,7 @@ public class GraphViewController  implements Initializable {
 
     @FXML//Loads the new scene
     void btnTableViewClicked(ActionEvent event)  throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("db-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(GameOfThronesData.class.getResource("db-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Game of Thrones: Table View");
